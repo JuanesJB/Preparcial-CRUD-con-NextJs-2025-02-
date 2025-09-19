@@ -17,15 +17,23 @@ export default function AuthorCard({ author, onEdit, onDelete }: AuthorCardProps
             className="w-full h-full object-cover"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.style.display = 'none';
-              target.nextElementSibling?.classList.remove('hidden');
+              const fallbackDiv = target.parentElement?.querySelector('.fallback-icon') as HTMLElement;
+              if (fallbackDiv) {
+                target.style.display = 'none';
+                fallbackDiv.classList.remove('hidden');
+              }
             }}
           />
         ) : null}
-        <div className={`text-gray-400 ${author.image ? 'hidden' : ''}`}>
+        <div className={`text-gray-400 fallback-icon ${author.image ? 'hidden' : ''}`}>
           <svg className="w-20 h-20 mx-auto" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
           </svg>
+          {author.image && (
+            <p className="text-xs text-red-500 mt-2 text-center px-2">
+              Error al cargar imagen
+            </p>
+          )}
         </div>
         <div className="absolute top-2 right-2 bg-white bg-opacity-90 rounded-full p-1">
           <div className="w-3 h-3 bg-green-400 rounded-full"></div>

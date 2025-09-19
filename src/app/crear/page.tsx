@@ -133,9 +133,42 @@ export default function CreateAuthorPage() {
                   placeholder="https://ejemplo.com/imagen.jpg"
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-500 text-gray-900 text-lg transition duration-200"
                 />
-                <p className="text-sm text-gray-500 mt-2 font-medium">
-                  Opcional - URL de una imagen del autor
-                </p>
+                <div className="mt-3 space-y-2">
+                  <p className="text-sm text-gray-600 font-medium">
+                    Opcional - URL directa de una imagen (debe terminar en .jpg, .png, .gif, etc.)
+                  </p>
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                    <p className="text-xs text-blue-800 font-semibold mb-1">Ejemplos de URLs válidas:</p>
+                    <ul className="text-xs text-blue-700 space-y-1">
+                      <li>• https://httpbin.org/image/jpeg</li>
+                      <li>• https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop</li>
+                      <li>• https://picsum.photos/300/200</li>
+                    </ul>
+                  </div>
+                  <p className="text-xs text-red-600 font-medium">
+                    ❌ No uses URLs de páginas web (como https://unsplash.com/photos/...)
+                  </p>
+                  {formData.image && (
+                    <div className="mt-4">
+                      <p className="text-sm text-gray-700 font-semibold mb-2">Vista previa:</p>
+                      <div className="border-2 border-gray-200 rounded-lg overflow-hidden w-32 h-32 bg-gray-100 flex items-center justify-center">
+                        <img
+                          src={formData.image}
+                          alt="Vista previa"
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = 'none';
+                            const parent = target.parentElement;
+                            if (parent) {
+                              parent.innerHTML = '<div class="text-red-500 text-xs text-center p-2">❌ Error al cargar imagen</div>';
+                            }
+                          }}
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
 
               <div className="flex space-x-4 pt-6">

@@ -1,8 +1,6 @@
-Aquí tienes una versión más resumida y con tono más natural, como si lo hubiera escrito un estudiante universitario (sin emojis, menos repetición, más directo):
+## Preparcial (20%) – CRUD con NextJs
 
----
-
-# Bookstore Frontend - CRUD de Autores
+## Bookstore Frontend - CRUD de Autores
 
 Aplicación web en **Next.js, TypeScript y Tailwind CSS** que implementa un CRUD para gestionar autores de libros.
 
@@ -73,7 +71,3 @@ src/
 * Manejo de estado con React y custom hooks
 * Tailwind CSS para estilos y diseño responsivo
 * Proyecto realizado como parte del curso de desarrollo web
-
----
-
-¿Quieres que lo deje todavía más breve (como un README de 1 minuto de lectura) o prefieres mantener este nivel de detalle intermedio?

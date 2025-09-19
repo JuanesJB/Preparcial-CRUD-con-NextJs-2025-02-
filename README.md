@@ -2,9 +2,9 @@
 
 ## Bookstore Frontend - CRUD de Autores
 
-Aplicación web en **Next.js, TypeScript y Tailwind CSS** que implementa un CRUD para gestionar autores de libros.
+Aplicación web para Programacion con tecnologias WEB en **Next.js, TypeScript y Tailwind CSS** que implementa un CRUD para gestionar autores de libros.
 
-## Funcionalidades
+## Que Funcionalidades ya tenemos : 
 
 * Listar autores
 * Crear nuevos registros
@@ -13,19 +13,19 @@ Aplicación web en **Next.js, TypeScript y Tailwind CSS** que implementa un CRUD
 * Navegación con App Router
 * Diseño responsivo
 
-## Tecnologías
+## Las Tecnologías que usamos son :
 
 * Next.js 15
 * TypeScript
 * Tailwind CSS
 * React Hooks y custom hooks
 
-## Requisitos
+## LosRequisitos para que todo funcione : 
 
 * **Node.js 18+**
 * Backend activo en `http://127.0.0.1:8080`
 
-## Instalación
+## Para hacer la Instalación necesitamos :
 
 1. Instalar dependencias:
 
@@ -50,7 +50,7 @@ Aplicación web en **Next.js, TypeScript y Tailwind CSS** que implementa un CRUD
 
    Disponible en: [http://localhost:3000](http://localhost:3000)
 
-## Estructura del Proyecto
+## Estructura del Proyecto que planteamos : 
 
 ```
 src/
@@ -64,7 +64,7 @@ src/
 └── types/               # Interfaces TypeScript
 ```
 
-## Notas de Desarrollo
+## Notas para cumplir con los requisitos del enunciado / el correo que enviaron con aclaraciones : 
 
 * CRUD completo integrado al backend
 * Formularios controlados y validados
